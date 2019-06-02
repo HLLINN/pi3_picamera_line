@@ -12,39 +12,18 @@ import subprocess  #added by R.L.at 2019/5/16 for ip...
 import requests, os  #added by R.L.at 2019/5/16
 #Above is added by R.L.at 2019/5/16
 
-'''#Below is added by R.L.at 2019/5/17
-Token = "Gk0Tda76FRMQnj2ockJcAZ9we8fUElOkScBVlczLpua"
-TurnOn_message = "\nIoT Pi Zero W turn on \n Pi Zero W IP: "
-ip = subprocess.check_output(['hostname', '-I']) #added by R.L at 2019/2/9 for ip...
-ip_message = subprocess.check_output(['hostname', '-I']) #added by R.L at 2019/2/9 for ip...
-void_message ="\n" #added by R.L at 2019/2/9 for ip...
-Time_message = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
-MESSAGE = ''
-time.sleep(10)    #before: time.sleep(10)
-MESSAGE = TurnOn_message+ ip_message+ Time_message
-lineTool.lineNotify(Token, MESSAGE)
-print("Send message to Line \n%s\n" % MESSAGE)
-#Above is added by R.L.at 2019/5/17'''
-
 camera = PiCamera()
 camera.resolution = (640, 480)
-
 #camera.rotate = 180
 #camera.resolution = (1920, 1080) # didn't work with LINE, commented by R.L. at 20190519
 #camera.framerate = 15  # simultaneously exists with 1920x1080 definition
 #camera.resolution = (60, 60) # the minimum definition
 #camera.resolution = (2592, 1944) # the maximum definition
 #camera.framerate = 15  # simultaneously exists with the maximum definition
-
 print('Rest for 60 seconds for settling down...') #Rest for 60 seconds for settling down, added by R.L. at 20190519
 sleep(5) #Rest for 60 seconds for settling down, added by R.L. at 20190519
 
-'''
-camera.start_preview()
-sleep(5)
-camera.capture("/home/pi/picamera_file/image.jpg")
-camera.stop_preview()
-'''
+
 i=1
 x=100 #TTL photos to capture
 n=60 #interval between capturing photo
@@ -68,7 +47,6 @@ for i in range(x): #****Don't less than 10   #for i in range(10):
     sleep(5) #added by R.L. at 20190504
     timenow = (time.strftime("%y-%b-%d_%H:%M:%S"))
     #camera.capture('/home/pi/picamera_file/image{0:04d}.jpg'.format(i))
-    
     #camera.capture("/home/pi/picamera_file/"+timenow+".jpg".format(i))
     camera.capture("/home/pi/picamera_file_dontmove/"+timenow+".jpg".format(i))
     #print("/home/pi/picamera_file/"+timenow+".jpg")
