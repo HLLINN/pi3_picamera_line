@@ -40,5 +40,5 @@ ex:![image](https://github.com/stephyang/CarouSell-test/blob/master/CarouSell-te
 <br/>
 4.<http://pythonorz.blogspot.com/2017/12/python-line-notify-line-notify-line.html>
 <br/>
-5.<http://pythonorz.blogspot.com/2017/12/python-line-notify_18.html> **
+5.<http://pythonorz.blogspot.com/2017/12/python-line-notify_18.html>**
 <br/>
