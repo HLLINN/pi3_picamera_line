@@ -23,7 +23,6 @@ camera.resolution = (640, 480)
 print('Rest for 60 seconds for settling down...') #Rest for 60 seconds for settling down, added by R.L. at 20190519
 sleep(5) #Rest for 60 seconds for settling down, added by R.L. at 20190519
 
-
 i=1
 x=100 #TTL photos to capture
 n=60 #interval between capturing photo
@@ -53,7 +52,7 @@ for i in range(x): #****Don't less than 10   #for i in range(10):
     print("/home/pi/picamera_file_dontmove/"+timenow+".jpg")
     
     #Below is added by R.L.at 2019/5/16
-    token = "Gk0Tda76FRMQnj2ockJcAZ9we8fUElOkScBVlczLpua"
+    token = "your token"
     #Below is added by R.L.at 2019/5/17
     TurnOn_message = "\nHello Python, this is from Raspberry Pi Zero W. \n Pi Zero W IP: "
     ip = subprocess.check_output(['hostname', '-I']) 
@@ -77,7 +76,6 @@ for i in range(x): #****Don't less than 10   #for i in range(10):
     sleep(n) #every shot interval  #revised by R.L. at 20190504
 #system('convert -delay 10 -loop 0 /home/pi/picamera_file/image*.jpg /home/pi/picamera_file/animation.gif')
 print("capturing done")
-
 print("Exit the program...")
 print("sudo shutdown now -h")
 def lineNotify(token, msg, picURI):
